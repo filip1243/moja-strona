@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Tygodniowy plan zajęć</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #003366;
+    }
+    table {
+      width: 90%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: #fff;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #cce0ff;
+    }
+    a {
+      color: #004080;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      display: block;
+      margin: 20px auto;
+      max-width: 400px;
+    }
+    .section {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="plan">
+    <h1>Tygodniowy plan zajęć</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Godzina</th>
+          <th>Poniedziałek</th>
+          <th>Wtorek</th>
+          <th>Środa</th>
+          <th>Czwartek</th>
+          <th>Piątek</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>8:00 - 9:00</td><td><a href="#" onclick="show('matematyka')">Matematyka</a></td><td>Historia</td><td>WF</td><td><a href="#" onclick="show('angielski')">Angielski</a></td><td><a href="#" onclick="show('matematyka')">Matematyka</a></td></tr>
+        <tr><td>9:00 - 10:00</td><td><a href="#" onclick="show('informatyka')">Informatyka</a></td><td><a href="#" onclick="show('matematyka')">Matematyka</a></td><td>Informatyka</td><td>Biologia</td><td>Historia</td></tr>
+        <tr><td>10:00 - 11:00</td><td><a href="#" onclick="show('angielski')">Angielski</a></td><td>Biologia</td><td>Historia</td><td>Angielski</td><td>Angielski</td></tr>
+        <tr><td>11:00 - 12:00</td><td>WF</td><td>Angielski</td><td><a href="#" onclick="show('matematyka')">Matematyka</a></td><td>WF</td><td>Biologia</td></tr>
+        <tr><td>12:00 - 13:00</td><td>Polski</td><td>Polski</td><td>Biologia</td><td>Informatyka</td><td>Polski</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="matematyka" class="section">
+    <h2>Matematyka</h2>
+    <p style="text-align:center;">Uczymy się algebry, geometrii i rozwiązywania problemów.</p>
+    <img src="https://via.placeholder.com/400x250.png?text=Matematyka" alt="Matematyka">
+    <p style="text-align:center;"><a href="#" onclick="show('plan')">← Powrót do planu</a></p>
+  </div>
+
+  <div id="informatyka" class="section">
+    <h2>Informatyka</h2>
+    <p style="text-align:center;">Poznajemy programowanie, algorytmy i obsługę komputera.</p>
+    <img src="https://via.placeholder.com/400x250.png?text=Informatyka" alt="Informatyka">
+    <p style="text-align:center;"><a href="#" onclick="show('plan')">← Powrót do planu</a></p>
+  </div>
+
+  <div id="angielski" class="section">
+    <h2>Angielski</h2>
+    <p style="text-align:center;">Ćwiczymy słownictwo, gramatykę oraz konwersacje.</p>
+    <img src="https://via.placeholder.com/400x250.png?text=Angielski" alt="Angielski">
+    <p style="text-align:center;"><a href="#" onclick="show('plan')">← Powrót do planu</a></p>
+  </div>
+
+  <script>
+    function show(id) {
+      document.getElementById('plan').style.display = 'none';
+      document.querySelectorAll('.section').forEach(el => el.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
